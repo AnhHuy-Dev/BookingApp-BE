@@ -1,0 +1,88 @@
+GET  http://localhost:8000/
+###
+POST   http://localhost:8000/api/hotels/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDc0M2NjYzFmMjBkZGQ0ZjQ3MDRmMDkiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODUzNDI0NDN9._YNAoVlJiLVqD1eXT9WKc_5BincR0kHhYJ4LuT06SHs
+
+{
+    "name": "Hotel Suyndy",
+    "type": "hotel",
+    "city": "Australia",
+    "address": "Somewhere",
+    "distance": "500",
+    "photos": [],
+    "title": "Best hotel",
+    "desc": "Small hotel in the beach",
+    "rooms": [],
+    "cheapestPrice": 100,
+    "featured" : false
+}
+
+###
+POST http://localhost:8000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "anhhuy11",
+    "password": "1234",
+    "email": "phamanhhuy22@gmail.com",
+    "country": "USA",
+    "img": "https://cdn3.vectorstock.com/i/1000x1000/30/97/flat-business-man-user-profile-avatar-icon-vector-4333097.jpg",
+    "city": "New York",
+    "phone": "0905345332"
+}
+
+###
+POST http://localhost:8000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "anhhuy",
+    "password": "1234"
+}
+
+###
+GET http://localhost:8000/api/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDc0M2NjYzFmMjBkZGQ0ZjQ3MDRmMDkiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODUzNDIzOTl9.Eg6m7JtHUClH7ydpC2we5Ok4YwJ4FZP0yEegk-Rpzgw
+
+###
+POST http://localhost:8000/api/rooms/64745d28eaeaae4f294dd1ad
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDc0M2NjYzFmMjBkZGQ0ZjQ3MDRmMDkiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODUzNDQwMTN9.kB3wy5iRUrsm5waUrXhGh16VgfpJXnJ08JETO_gdv58
+
+{
+    "title": "Queen Room",
+    "desc": "King size bed, 1 bedroom, balcony",
+    "price": 100,
+    "maxPeople": 2,
+    "roomNumbers": [{"number": 101}, {"number": 102}]
+}
+
+###
+PUT http://localhost:8000/api/rooms/64735918dfbaf0cd84be789e
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDc0M2NjYzFmMjBkZGQ0ZjQ3MDRmMDkiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODUzNDQwMTN9.kB3wy5iRUrsm5waUrXhGh16VgfpJXnJ08JETO_gdv58
+
+{
+    "title": "Bed Room 1",
+    "desc": "King size bed, 1 bedroom, balcony",
+    "price": 100,
+    "maxPeople": 2,
+    "roomNumbers": [{"number": 101}, {"number": 102}]
+}
+
+###
+DELETE  http://localhost:8000/api/rooms/6474567b5123023dd0e0d8f8/64735918dfbaf0cd84be789e
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDc0M2NjYzFmMjBkZGQ0ZjQ3MDRmMDkiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODUzNDQwMTN9.kB3wy5iRUrsm5waUrXhGh16VgfpJXnJ08JETO_gdv58
+
+###
+GET http://localhost:8000/api/rooms/6474579ee216535b574fc33b
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDc0M2NjYzFmMjBkZGQ0ZjQ3MDRmMDkiLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE2ODUzNDQwMTN9.kB3wy5iRUrsm5waUrXhGh16VgfpJXnJ08JETO_gdv58
+
+###
+GET  http://localhost:8000/api/hotels/countByCity?cities=Australia,America,London
+
+###
+GET  http://localhost:8000/api/hotels/countByType
+
+
